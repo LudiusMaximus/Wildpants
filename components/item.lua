@@ -302,6 +302,7 @@ function ItemSlot:UpdateUpgradeIcon()
 end
 
 function ItemSlot:UpdateLocked()
+  _, _, self.info.locked = GetContainerItemInfo(self:GetBag(), self:GetID())
 	self:SetLocked(self.info.locked)
 end
 
